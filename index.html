@@ -9,22 +9,22 @@
      <h2>Taux de change</h2>
      <table>
          <tr>
-             <td><input  type="text" size="15" /></td>
+             <td><input id="fromAmount" type="text" onkeyup="recupererValeur()" size="15" /></td>
              <td>
-                 <select>
-                   <option value="">Europe (EUR)</option>
-                   <option value="">Dollars US (USD)</option>
-                   <option value="">Japanese Yen (JPY)</option>
+                 <select id="from" onchange="recupererValeur()">
+                   <option value="EUR">Europe (EUR)</option>
+                   <option value="USD">Dollars US (USD)</option>
+                   <option value="JPY">Japanese Yen (JPY)</option>
                  </select>
              </td>
          </tr>
          <tr>
-            <td><input  type="text" size="15"/></td>
+            <td><input id="toAmount" disabled type="text" size="15"/></td>
              <td>
-                 <select ">
-                   <option value="">Livres(GBP)</option>
-                   <option value="">Japanese Yen (JPY)</option>
-                   <option value="">Dollars US (USD)</option>
+                 <select id="to" onchange="recupererValeur()>
+                   <option value="GBP">Livres(GBP)</option>
+                   <option value="JPY">Japanese Yen (JPY)</option>
+                   <option value="USD">Dollars US (USD)</option>
                  </select>
              </td>
          </tr>

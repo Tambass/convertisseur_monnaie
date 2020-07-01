@@ -5,8 +5,12 @@ function recupererValeur() {
   $.ajax({
     url: url,
     type: "GET",
-    success: function (res, status, req) { // Callback
-      console.log("res: ", res.rates.USD);
-    },
+    success: function (res, status, req) {
+      var rates = res.rates.value
+      var fromAmount = document.getElementById("fromAmount").value;
+      var from = document.getElementById("from").value;
+      var to = document.getElementById("to").value;
+        console.log(from, to);
+    }, // Callback
   });
 }
