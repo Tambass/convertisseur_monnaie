@@ -6,11 +6,13 @@ function recupererValeur() {
     url: url,
     type: "GET",
     success: function (res, status, req) {
-      var rates = res.rates.value
+      var rates = res.rates;
       var fromAmount = document.getElementById("fromAmount").value;
       var from = document.getElementById("from").value;
       var to = document.getElementById("to").value;
-        console.log(from, to);
+      var result = (fromAmount * rates[to]) / rates[from];
+      // console.log(result);
+      document.getElementById("toAmount").value = result;
     }, // Callback
   });
 }
